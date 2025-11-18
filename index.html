@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD Ndlovu Solutions (Pty) Ltd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <div class="brand">
+            <div class="logo-mark">SD</div>
+            <div class="brand-text">
+                <h1>SD Ndlovu Solutions</h1>
+                <p class="sm">Mining Support & Logistics</p>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="hamburger" id="hamburger">☰</div>
+
+        <nav class="main-nav" id="mobileMenu">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <img src="background.jpg" class="hero-img">
+
+    <div class="hero-content">
+        <h2>Your Trusted Partner in Mining Support & Logistics</h2>
+        <p class="lead">
+            SD Ndlovu Solutions delivers reliable operational support, transport,
+            and workforce solutions for the mining sector.
+        </p>
+        <a href="about.html" class="btn btn-primary">Explore Our Company</a>
+    </div>
+</section>
+
+
+<script>
+    const ham = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+
+    ham.onclick = () => {
+        menu.classList.toggle('show');
+    };
+</script>
+
+</body>
+</html>

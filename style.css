@@ -1,0 +1,182 @@
+/* ================================
+   BASE THEME & RESET
+================================ */
+:root {
+  --yellow: #BB771C;
+  --charcoal: #343433;
+  --bg: #F6F7F8;
+  --text: #0E0E0F;
+  font-family: Inter, system-ui;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ================================
+   HEADER
+================================ */
+.site-header {
+  background: rgba(52,52,51,0.96);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-mark {
+  width: 50px;
+  height: 50px;
+  background: var(--yellow);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+/* NAVIGATION */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.main-nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* ================================
+   HERO
+================================ */
+.hero {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* ================================
+   SERVICES
+================================ */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* ================================
+   RESPONSIVE FIXES — MOBILE
+================================ */
+@media (max-width: 900px) {
+
+  /* NAV hidden for now (simple) */
+  .main-nav ul {
+    display: none;
+  }
+
+  .hero {
+    height: 220px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  /* Services go single column */
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .brand-text h1 {
+    font-size: 16px;
+  }
+
+  .logo-mark {
+    width: 44px;
+    height: 44px;
+  }
+
+  .hero {
+    height: 200px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+}

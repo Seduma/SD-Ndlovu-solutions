@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – SD Ndlovu Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <div class="brand">
+            <div class="logo-mark">SD</div>
+            <div class="brand-text">
+                <h1>SD Ndlovu Solutions</h1>
+                <p class="sm">Mining Support & Logistics</p>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="hamburger" id="hamburger">☰</div>
+
+        <nav class="main-nav" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+<div class="container contact-grid">
+
+    <div class="contact-card">
+        <h2>Send us a Message</h2>
+
+        <form class="contact-form">
+            <label>
+                Full Name
+                <input type="text" required>
+            </label>
+
+            <label>
+                Email Address
+                <input type="email" required>
+            </label>
+
+            <label>
+                Message
+                <textarea rows="6" required></textarea>
+            </label>
+
+            <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <h3>Company Information</h3>
+        <p><strong>SD Ndlovu Solutions (Pty) Ltd</strong></p>
+        <p>Mining Support & Logistics</p>
+        <p>Email: info@mmsacc.co.za</p>
+        <p>Phone: 013 110 6010</p>
+    </div>
+
+</div>
+
+
+<script>
+    const ham = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+
+    ham.onclick = () => {
+        menu.classList.toggle('show');
+    };
+</script>
+
+</body>
+</html>
